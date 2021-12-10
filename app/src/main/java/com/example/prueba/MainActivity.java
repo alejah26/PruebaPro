@@ -78,13 +78,14 @@ public class MainActivity extends AppCompatActivity {
             registro.put("precioP", precioP);
             //Insertar los datos en la tabla
             db.insert("Producto", null, registro);
+            listar();
             //cerrar base de datos
             db.close();
             //Limpiar los campos del formulario
             etcodigo.setText("");
             etnombre.setText("");
             etprecio.setText("");
-            listar();
+
 
             Toast.makeText(this, "El producto se ha registrado correctamente", Toast.LENGTH_LONG).show();
         } else {
@@ -104,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
             if (fila.moveToFirst()) {
                 etnombre.setText(fila.getString(0));
                 etprecio.setText(fila.getString(1));
+                listar();
                 db.close();
 
             } else {
@@ -189,10 +191,20 @@ public class MainActivity extends AppCompatActivity {
         if(lista.isEmpty()){
             lv_producto.setVisibility(View.VISIBLE);
             ArrayAdapter<Producto> adaptador=new ArrayAdapter<Producto>(this, android.R.layout.simple_list_item_1,lista);
-           lv_producto.setAdapter(adaptador);
+            lv_producto.setAdapter(adaptador);
+
+            lv_producto.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Producto p=lista.get(position);
+                    etnombre.setText(p.getNombreP());
+                    etcodigo.setText(Integer.toString(p.getCodigoP()));
+                    etprecio.setText(Double.toString(p.getPrecioP()));
+                }
+            });
         }else{
             lv_producto.setVisibility(View.INVISIBLE);
         }
     }
 
-    }
+}

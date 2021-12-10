@@ -18,11 +18,7 @@ public class Producto {
 
      @Override
     public String toString() {
-        return "Producto{" +
-                "nombreP='" + nombreP + '\'' +
-                ", codigoP=" + codigoP +
-                ", precioP=" + precioP +
-                '}';
+        return nombreP +"   "+codigoP+"   "+ precioP;
     }
 
     public String getNombreP() {
@@ -48,4 +44,5 @@ public class Producto {
     public void setPrecioP(double precioP) {
         this.precioP = precioP;
     }
+
 }
