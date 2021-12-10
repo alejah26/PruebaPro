@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Productos</string>
+    <string name="etnombre">Inserte Nombre</string>
+    <string name="etcodigo">Inserte Codigo</string>
+    <string name="etprecio">Inserte Precio</string>
+    <string name="guardar_item">Guardar</string>
+    <string name="edit_item">Editar</string>
+    <string name="eliminar_item">Eliminar</string>
+    <string name="buscar_item">Buscar</string>
+</resources>
