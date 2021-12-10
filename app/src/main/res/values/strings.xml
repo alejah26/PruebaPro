@@ -3,6 +3,10 @@
     <string name="etnombre">Inserte Nombre</string>
     <string name="etcodigo">Inserte Codigo</string>
     <string name="etprecio">Inserte Precio</string>
+    <string name="tv_productos">Productos</string>
+    <string name="tv_codigo">Código</string>
+    <string name="tv_nombre">Nombre</string>
+    <string name="tv_precio">Precio</string>
     <string name="guardar_item">Guardar</string>
     <string name="edit_item">Editar</string>
     <string name="eliminar_item">Eliminar</string>

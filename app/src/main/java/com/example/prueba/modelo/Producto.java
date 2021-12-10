@@ -1,11 +1,9 @@
 package com.example.prueba.modelo;
 
-import java.util.List;
-
 public class Producto {
-    String nombreP;
-    Integer codigoP;
-    Double precioP;
+    private String nombreP;
+    private int codigoP;
+    private double precioP;
 
     public Producto() {
     }
@@ -18,7 +16,7 @@ public class Producto {
 
      @Override
     public String toString() {
-        return nombreP +"   "+codigoP+"   "+ precioP;
+        return "     "+codigoP +"                   "+nombreP+"       "+ precioP;
     }
 
     public String getNombreP() {
